@@ -1,0 +1,30 @@
+input,
+select,
+textarea {
+  outline: none;
+  background-color: whitesmoke;
+  border: thin solid transparent;
+  transition: all 0.25s;
+}
+
+input,
+textarea {
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+input:hover,
+textarea:hover {
+  border-color: rgb(100, 108, 255);
+}
+
+input:focus,
+textarea:focus {
+  background-color: transparent;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: rgb(100, 108, 255);
+}

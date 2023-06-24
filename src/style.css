@@ -1,0 +1,73 @@
+@import url(./styles/input.css);
+@import url(./styles/list.css);
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  padding: 1rem;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  transition: all 0.25s;
+}
+
+a {
+  font-weight: 500;
+  color: rgb(100, 108, 255);
+  text-decoration: inherit;
+}
+a:hover {
+  color: rgb(83, 91, 242);
+}
+
+a {
+  font-weight: 500;
+  color: rgb(100, 108, 255);
+  text-decoration: inherit;
+}
+a:hover {
+  color: rgb(83, 91, 242);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: thin solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.25s;
+}
+button:not([disabled]) {
+  cursor: pointer;
+}
+button:active:not([disabled]) {
+  border-color: rgb(100, 108, 255);
+}
