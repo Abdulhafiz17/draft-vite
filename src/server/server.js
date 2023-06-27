@@ -1,5 +1,6 @@
 import axios from "axios";
 import baseurl from "./baseurl";
+import store from "../store";
 const token = localStorage.getItem("access_token");
 
 export default async function server(
@@ -7,6 +8,8 @@ export default async function server(
   method = "get",
   data = null
 ) {
+  await store.dispatch("setLoading", true);
+
   let result, error;
 
   await axios
@@ -23,7 +26,9 @@ export default async function server(
       error = err;
       console.error(error);
     })
-    .finally(() => {});
+    .finally(() => {
+      store.dispatch("setLoading", false);
+    });
 
   return new Promise((resolve, reject) => {
     if (result) resolve(result);

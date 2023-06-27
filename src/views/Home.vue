@@ -26,7 +26,6 @@ export default {
         per_page: this.users.per_page,
       };
       api.users(params).then((val) => {
-        console.log(val);
         this.users = val;
       });
     },
@@ -35,6 +34,8 @@ export default {
 </script>
 
 <template>
+  <pre>{{ users }}</pre>
+
   <Pagination v-model="users" @get="get()" />
 
   <tab :tabs="['home', 'profile', 'setting']" v-if="false">
