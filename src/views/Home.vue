@@ -7,6 +7,7 @@ export default {
   components: { Pagination, DataDropdown },
   data() {
     return {
+      user: null,
       users: {
         page: 1,
         per_page: 1,
