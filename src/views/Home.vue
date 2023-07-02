@@ -8,7 +8,7 @@ export default {
   data() {
     return {
       user: null,
-      users: {
+      users: this.$util.storage("home-users") || {
         page: 1,
         per_page: 1,
         total: 1,
@@ -26,8 +26,9 @@ export default {
         page: this.users.page,
         per_page: this.users.per_page,
       };
-      api.users(params).then((val) => {
-        this.users = val;
+      api.users(params).then((res) => {
+        this.users = res.data;
+        this.$util.storage("home-users", this.users);
       });
     },
   },
@@ -35,6 +36,7 @@ export default {
 </script>
 
 <template>
+  <RouterLink to="/main">main</RouterLink>
   <pre>{{ users }}</pre>
 
   <Pagination v-model="users" @get="get()" />

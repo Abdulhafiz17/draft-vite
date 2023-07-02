@@ -64,6 +64,11 @@ export default {
 </template>
 
 <style scoped>
+* {
+  padding: unset;
+  border-radius: unset;
+}
+
 .v-pagination {
   width: 100%;
   display: flex;
@@ -74,11 +79,11 @@ export default {
 
 .v-pagination button {
   padding: 5px 10px;
-  border-radius: 0;
 }
 .v-pagination button:not(.active) {
   font-size: large;
 }
+
 .v-pagination > *:first-child {
   border-top-left-radius: inherit;
   border-bottom-left-radius: inherit;

@@ -20,7 +20,7 @@ export default async function server(
       data: data,
     })
     .then((res) => {
-      result = res.data;
+      result = res;
     })
     .catch((err) => {
       error = err;

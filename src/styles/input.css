@@ -4,13 +4,17 @@ textarea {
   outline: none;
   background-color: whitesmoke;
   border: thin solid transparent;
+  border-radius: 10px;
   transition: all 0.25s;
 }
 
 input,
 textarea {
   padding: 0.5rem;
-  border-radius: 10px;
+}
+
+select {
+  padding: 0.5rem;
 }
 
 input:hover,
