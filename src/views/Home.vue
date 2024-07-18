@@ -18,38 +18,14 @@ export default {
     };
   },
   created() {
-    this.get();
+    navigator.vibrate([500]);
   },
-  methods: {
-    get() {
-      const params = {
-        page: this.users.page,
-        per_page: this.users.per_page,
-      };
-      api.users(params).then((res) => {
-        this.users = res.data;
-        this.$util.storage("home-users", this.users);
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 
 <template>
-  <RouterLink to="/main">main</RouterLink>
-  <pre>{{ users }}</pre>
-
-  <Pagination v-model="users" @get="get()" />
-
-  <tab :tabs="['home', 'profile', 'setting']" v-if="false">
-    <template #1>1</template>
-    <template #2>2</template>
-    <template #3>3</template>
-  </tab>
-
-  <DataDropdown type="user" all v-model="user" v-if="false"></DataDropdown>
-
-  <button @click="$refs.modal.toggleModal()" v-if="false">toggle</button>
+  <button @click="$refs.modal.toggleModal()">toggle</button>
 
   <modal ref="modal">
     <template #header>

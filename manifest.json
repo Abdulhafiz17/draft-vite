@@ -1,0 +1,21 @@
+{
+  "name": "Draft",
+  "short_name": "Draft",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Draft Vite",
+  "icons": [
+    {
+      "src": "public/vite.svg",
+      "sizes": "48x48",
+      "type": "image/svg"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=cheeaun.hackerweb"
+    }
+  ]
+}
