@@ -17,9 +17,7 @@ export default {
       },
     };
   },
-  created() {
-    navigator.vibrate([500]);
-  },
+  created() {},
   methods: {},
 };
 </script>
