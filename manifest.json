@@ -4,6 +4,7 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#fff",
+  "theme_color": "white",
   "description": "Draft Vite",
   "icons": [
     {
