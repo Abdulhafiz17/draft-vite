@@ -3,6 +3,10 @@ import Loading from "./components/Loading/Loading.vue";
 export default {
   name: "App",
   components: { Loading },
+  created() {
+    console.log(0);
+    alert(0);
+  },
 };
 </script>
 
