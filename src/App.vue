@@ -3,10 +3,18 @@ import Loading from "./components/Loading/Loading.vue";
 export default {
   name: "App",
   components: { Loading },
+  data() {
+    return {
+      reloaded: sessionStorage.getItem("reloaded"),
+    };
+  },
   created() {
-    window.addEventListener("vite:preloadError", (event) => {
-      window.location.reload(); // for example, refresh the page
-    });
+    if (this.reloaded) {
+      sessionStorage.removeItem("reloaded");
+    } else {
+      sessionStorage.setItem("reloaded", "reloaded");
+      location.reload();
+    }
   },
 };
 </script>
