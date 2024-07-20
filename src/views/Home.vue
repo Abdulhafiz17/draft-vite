@@ -23,7 +23,6 @@ export default {
 </script>
 
 <template>
-  <RouterLink to="/main">main</RouterLink>
   <h1>Home</h1>
   <button @click="$refs.modal.toggleModal()">toggle</button>
 

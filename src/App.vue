@@ -8,11 +8,6 @@ export default {
       reloaded: sessionStorage.getItem("reloaded"),
     };
   },
-  watch: {
-    $route(to) {
-      this.$router.replace(this.$util.routerPrefix() + to.path);
-    },
-  },
   created() {
     if (this.reloaded) {
       sessionStorage.removeItem("reloaded");
