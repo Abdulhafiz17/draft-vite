@@ -4,8 +4,9 @@ export default {
   name: "App",
   components: { Loading },
   created() {
-    console.log(0);
-    alert(0);
+    window.addEventListener("vite:preloadError", (event) => {
+      window.location.reload(); // for example, refresh the page
+    });
   },
 };
 </script>
