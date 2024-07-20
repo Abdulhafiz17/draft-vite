@@ -1,14 +1,14 @@
 {
   "name": "Draft",
   "short_name": "Draft",
-  "start_url": "./",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "white",
   "description": "Draft Vite",
   "icons": [
     {
-      "src": "./public/vite.svg",
+      "src": "vite.svg",
       "sizes": "48x48",
       "type": "image/svg"
     }
