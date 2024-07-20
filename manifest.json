@@ -1,7 +1,8 @@
 {
   "name": "Draft",
   "short_name": "Draft",
-  "start_url": "index.html",
+  "start_url": "./",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "white",
