@@ -21,7 +21,6 @@ export default {
 
 <template>
   <Loading />
-  <h1>Hi</h1>
   <RouterView v-slot="{ route, Component }">
     <Transition name="v-router" mode="out-in">
       <div :key="route">
