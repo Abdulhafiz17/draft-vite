@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-const isProduct = process.env.NODE_ENV === "production" ? true : false;
+import util from "../server/util";
 
 const routes = [
   {
@@ -15,7 +15,7 @@ const routes = [
 ];
 
 routes.forEach((item) => {
-  if (isProduct) item.path = `/draft-vite/${item.path}`;
+  item.path = util.routerPrefix() + item.path;
 });
 
 const router = createRouter({
