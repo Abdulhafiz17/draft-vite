@@ -1,9 +1,14 @@
 @import url(./styles/input.css);
 @import url(./styles/list.css);
+@import url(./styles/table.css);
 
 :root {
+  --main-color: rgb(100, 100, 255);
+  --main-background-color: rgb(40, 40, 45);
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
+  font-size: 14px;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,9 +29,20 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: slategray;
+}
+
 body {
   min-width: 320px;
   min-height: 100vh;
+  color: lightgray;
+  background-color: var(--main-background-color);
 }
 
 #app {
@@ -34,7 +50,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  transition: all 0.25s;
+  scrollbar-gutter: stable both-edges;
 }
 
 a {
@@ -56,17 +72,33 @@ a:hover {
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 5px 10px;
+  color: lightgray;
+  background-color: rgb(60, 60, 65);
   border: thin solid transparent;
   border-radius: 8px;
   outline: none;
   font-weight: 500;
   font-family: inherit;
-  transition: all 0.25s;
+  transition: all 0.15s;
+}
+[class^="col"] > button {
+  height: 100%;
+}
+button:focus:not([disabled]) {
+  border-color: var(--main-color);
 }
 button:not([disabled]) {
   cursor: pointer;
 }
 button:active:not([disabled]) {
-  border-color: rgb(100, 108, 255);
+  border-color: var(--main-color);
+  box-shadow: 0 0 1px 1px var(--main-color);
+}
+
+.card {
+  background-color: var(--main-background-color);
+  border: thin solid var(--main-color);
+  border-radius: 10px;
+  transition: all 0.25s;
 }

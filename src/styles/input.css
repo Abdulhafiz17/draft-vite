@@ -1,34 +1,20 @@
 input,
 select,
-textarea {
+textarea,
+.form-control {
   outline: none;
-  background-color: whitesmoke;
-  border: thin solid transparent;
-  border-radius: 10px;
+  color: lightgray;
+  background-color: var(--main-background-color);
+  border: thin solid gray;
   transition: all 0.25s;
-}
-
-input,
-textarea {
-  padding: 0.5rem;
-}
-
-select {
-  padding: 0.5rem;
-}
-
-input:hover,
-textarea:hover {
-  border-color: rgb(100, 108, 255);
-}
-
-input:focus,
-textarea:focus {
-  background-color: transparent;
 }
 
 input:focus,
 select:focus,
-textarea:focus {
-  border-color: rgb(100, 108, 255);
+textarea:focus,
+.form-control:focus {
+  color: lightgray;
+  background-color: var(--main-background-color);
+  border-color: var(--main-color);
+  box-shadow: 0 0 1px 1px var(--main-color);
 }
