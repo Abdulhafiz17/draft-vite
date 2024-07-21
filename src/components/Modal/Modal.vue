@@ -70,7 +70,7 @@ export default {
 .v-modal {
   position: relative;
   height: max-content;
-  background-color: white;
+  background-color: var(--main-background-color);
   border-radius: 10px;
   transition: all 0.3s;
 }
@@ -95,7 +95,6 @@ export default {
   color: black;
   border-color: transparent;
   background-color: transparent;
-  font-size: large;
 }
 
 .v-modal-header {

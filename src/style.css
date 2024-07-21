@@ -85,9 +85,6 @@ button {
 [class^="col"] > button {
   height: 100%;
 }
-button:focus:not([disabled]) {
-  border-color: var(--main-color);
-}
 button:not([disabled]) {
   cursor: pointer;
 }
@@ -101,4 +98,27 @@ button:active:not([disabled]) {
   border: thin solid var(--main-color);
   border-radius: 10px;
   transition: all 0.25s;
+}
+
+[currency] {
+  position: relative;
+}
+[currency]::before {
+  content: attr(currency);
+  position: absolute;
+  padding: 5px;
+  background-color: var(--main-background-color);
+  border: thin solid darkslategray;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 600;
+  translate: 0 -101%;
+  opacity: 0;
+  scale: 0;
+  transition: opacity 0.25s;
+  z-index: 1;
+}
+[currency]:has(input:focus)::before {
+  opacity: 1;
+  scale: 1;
 }

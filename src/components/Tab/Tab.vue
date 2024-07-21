@@ -51,7 +51,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   gap: 1px;
-  border: thin solid rgb(100, 108, 255);
+  border: thin solid var(--main-color);
   border-radius: 10px;
 }
 
@@ -62,23 +62,28 @@ button {
   transition: box-shadow 0.5s;
 }
 
+button:active {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 button.active {
-  box-shadow: 0 0 5px 0px gray;
+  box-shadow: 0 0 5px 0px lightgray;
 }
 
 .v-tab-content {
   margin-top: 5px;
   padding: 10px;
   width: 100%;
-  border: thin solid rgb(100, 108, 255);
+  border: thin solid var(--main-color);
   border-radius: 10px;
 }
 
 .v-tab-enter-active {
-  animation: toggleTab 0.3s;
+  animation: toggleTab 0.2s;
 }
 .v-tab-leave-active {
-  animation: toggleTab 0.3s reverse;
+  animation: toggleTab 0.2s reverse;
 }
 
 @keyframes toggleTab {

@@ -15,7 +15,7 @@ app.config.globalProperties.$util = util;
 app
   .use(router)
   .use(store)
-  .component("dropdown", Dropdown)
-  .component("tab", Tab)
-  .component("modal", Modal)
+  .component("Dropdown", Dropdown)
+  .component("Tab", Tab)
+  .component("Modal", Modal)
   .mount("#app");
