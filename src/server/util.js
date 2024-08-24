@@ -1,8 +1,4 @@
 export default {
-  routerPrefix() {
-    if (location.host == "abdulhafiz17.github.io") return "/draft-vite/";
-    else return "";
-  },
   currency(number = Number()) {
     return Intl.NumberFormat("UZ-uz").format(Number(number).toFixed(2));
   },

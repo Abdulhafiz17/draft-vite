@@ -21,6 +21,11 @@ export default {
 
 <template>
   <Loading />
+  <div class="d-flex gap-1">
+    <router-link to="/">home</router-link>
+    <router-link to="/contacts">contacts</router-link>
+    <router-link to="/supply-counting">supply</router-link>
+  </div>
   <RouterView v-slot="{ route, Component }">
     <Transition name="v-router" mode="out-in">
       <div :key="route">

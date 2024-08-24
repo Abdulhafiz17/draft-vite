@@ -12,14 +12,20 @@ const routes = [
     name: "main",
     component: () => import("../views/Main/Main.vue"),
   },
+  {
+    path: "/contacts",
+    name: "contacts",
+    component: () => import("../views/Contacts/Contacts.vue"),
+  },
+  {
+    path: "/supply-counting",
+    name: "supply-counting",
+    component: () => import("../views/Supply/SupplyCounting.vue"),
+  },
 ];
 
-routes.forEach((item) => {
-  item.path = util.routerPrefix() + item.path;
-});
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory("draft-vite"),
   routes: routes,
 });
 

@@ -1,8 +1,6 @@
 <script>
-import SupplyCounting from "./Supply/SupplyCounting.vue";
 export default {
   name: "Home",
-  components: { SupplyCounting, SupplyCounting },
   data() {
     return {};
   },
@@ -12,5 +10,5 @@ export default {
 </script>
 
 <template>
-  <SupplyCounting />
+  <h1>Home</h1>
 </template>
