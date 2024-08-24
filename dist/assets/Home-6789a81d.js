@@ -1,0 +1,1 @@
+import{_ as e,o,c as t}from"./index-77eb4d14.js";const r={name:"Home",data(){return{}},created(){},methods:{}};function a(c,n,s,m,_,p){return o(),t("h1",null,"Home")}const f=e(r,[["render",a]]);export{f as default};
